@@ -1,0 +1,1681 @@
+
+/*  ----------
+    DEFULT CSS
+    ----------
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,500i,600,700,700i,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&display=swap');
+
+
+$font-size : 15px;
+$font-weight : normal;
+$font-family: 'Poppins', sans-serif;
+$font-family2: 'Lato', sans-serif;
+$white-color : #ffffff;
+$block-color : #000000;
+$header-text: #232a3f;
+$text-color: #4d4d4d;
+$text-color-2: #7c7c7c;
+$line-height : 26px;
+$main-background : #f0134d;
+$sec-background: #f5f7ff;
+
+
+html {
+    scroll-behavior: smooth;
+  }
+.section-padding {
+    padding: 100px 0;
+}
+.section-padding-two{
+    padding: 100px 0 70px;
+}
+.mb-30{
+    margin-bottom: 30px;
+}
+
+@mixin transition($property) {
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+body{
+    font-family: $font-family;
+}
+
+h1,h2,h3,h4,h5,h6,a {
+    font-family: $font-family;
+}
+
+h1 {
+    font-size:48px;
+    line-height: 58px;
+}
+p {
+    font-family: $font-family2;
+    line-height: $line-height;
+    font-size: $font-size;
+}
+
+/*  --------------
+    END DEFULT CSS
+    --------------
+*/
+
+/*  -----------------
+    SECTION TITLE CSS
+    -----------------
+*/
+
+.section-title{
+    position: relative;
+    text-align: center;
+    margin-bottom: 60px;
+    span{
+        font-size: 20px;
+        letter-spacing: 3px;
+        color: $main-background;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        display: inline-block;
+        font-weight: 500;
+    }
+    h2{
+        color: $header-text;
+        font-size: 40px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        line-height: 50px;
+    }
+    p{
+        font-size: 18px;
+        color: $text-color;
+    }
+}
+
+/*  ---------------------
+    END SECTION TITLE CSS
+    ---------------------
+*/
+
+/*  ----------
+    LOADER CSS
+    ----------
+*/
+
+.loader-box {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: $white-color;
+  left: 0;
+  top: 0;
+  z-index: 999999999;
+  display: block;
+  .preloder-wrap{
+        display: table-cell;
+        vertical-align: middle;
+        .preloder-inner {
+            width: 200px;
+            height: 100px;
+            margin: 0 auto;
+            position: relative;
+            top: 45%;
+        }
+        .ball {
+            width: 20px;
+            height: 20px;
+            margin: 20px auto;
+            border-radius: 50px;
+            background: $main-background; 
+        }
+        .ball:nth-child(1) {
+            margin-top: 0;
+            animation: scale 1s linear infinite;
+        }
+        .ball:nth-child(2) {
+            animation: scale 0.77s linear infinite;
+        }
+        .ball:nth-child(3) {
+            animation: scale 0.91s linear infinite;
+        }
+        @keyframes scale {
+            50% {
+                -webkit-transform: scale(2);
+                -moz-transform: scale(2);
+                -ms-transform: scale(2);
+                -o-transform: scale(2);
+                transform: scale(2);
+            }
+        }
+        img.logo-center {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+
+/*  --------------
+    END LOADER CSS
+    --------------
+*/
+/*  -------------
+    MAIN MENU CSS
+    -------------
+*/
+
+.main-menu {
+    padding: 40px 0 ;
+    background-color: transparent;
+    position: absolute;
+    z-index: 999;
+    width: 100%; 
+    .logo-area{
+        position: relative;
+        top: 12px;
+    }
+    .menu {
+        position: relative;
+        top: 12px;
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            top: 5px;
+            text-align: center;
+            position: relative;
+            li {
+                display: inline-block;
+                padding: 0 22px;
+                a {
+                    color: $white-color;
+                    font-size: 16px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    @include transition(all .5s);
+                    &:hover, &.active, &:active {
+                        color: $main-background;
+                    }
+                }
+            }
+        }
+    }
+    .search{
+        position: relative;
+        text-align: right;
+        .openBtn {
+            background: $main-background;
+            color: $white-color;
+            border: none;
+            font-size: 20px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            @include transition(all .5s);
+            &:hover {
+                background: $white-color;
+                color: $main-background;
+            }
+            &:focus{
+                outline-offset: 0;
+                outline: 0;
+            }
+          }
+          .overlay {
+            height: 100vh;
+            width: 100%;
+            display: none;
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            left: 0;
+            background-color: rgba(0,0,0, 0.7);
+            .overlay-content {
+                position: absolute;
+                top: 46%;
+                width: 80%;
+                left: 0;
+                right: 0;
+                text-align: center;
+                margin-top: 30px;
+                margin-left: auto;
+            }
+            .closebtn {
+                position: absolute;
+                top: 20px;
+                right: 45px;
+                font-size: 60px;
+                cursor: pointer;
+                color: $white-color;
+                &:hover {
+                    color: #ccc;
+                }
+            }
+            input[type=text] {
+                padding: 15px;
+                font-size: 17px;
+                border: none;
+                float: left;
+                width: 80%;
+                border-radius: 30px;
+                background: white;
+                border: 2px solid $main-background;
+                &:focus{
+                    outline-offset: 0;
+                    outline: 0;
+                }
+            }
+            button {
+                position: absolute;
+                width: 13%;
+                padding: 10px;
+                background: #f0134d;
+                color: #ffffff;
+                font-size: 17px;
+                border-radius: 30px;
+                border: none;
+                cursor: pointer;
+                -webkit-transition: all .5s;
+                transition: all .5s;
+                top: 5px;
+                right: 20%;
+                margin-right: 7px;
+                box-shadow: 3px 1px 19px rgba(0, 0, 0, .45);
+                border: 2px solid;
+                &:hover {
+                    background: $white-color;
+                    color: $main-background;
+                }
+                &:focus{
+                    outline-offset: 0;
+                    outline: 0;
+                }
+            }
+        }
+    }
+    
+}
+.menu-shrink {
+    position: fixed;
+    background-color: $main-background;
+    color: $white-color;
+    width: 100%;
+    padding: 10px 0;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+    z-index: 999;
+    top: 0;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+    .menu {
+        ul {
+            li{
+                
+                a {
+                    color: $white-color;
+                    font-size: 16px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    @include transition(all .5s);
+                    &:hover, &.active, &:active {
+                        color: $block-color;
+                    }
+                }
+            } 
+        }
+    }
+            
+    .openBtn {
+        background: $white-color !important;
+        color: $main-background !important;
+        border: none;
+        font-size: 20px;
+        width: 50px;
+        height: 50px;
+        line-height: 46px !important;
+        border-radius: 50%;
+        cursor: pointer;
+        @include transition(all .5s);
+        border: 2px solid $main-background !important;
+        &:hover {
+            background: $main-background !important;
+            border: 2px solid $white-color !important;
+            color: $white-color !important;
+        }
+        &:focus{
+            outline-offset: 0;
+            outline: 0;
+        }
+        }
+}
+  
+/*  -----------------
+    END MAIN MENU CSS
+    -----------------
+*/
+
+
+.banner-area{
+    position: relative;
+    background-image: url(../img/banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    z-index: 99;
+    &::before{
+        content: "";
+        background-color: rgba(0,0,0, 0.7);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .banner-text {
+        position: absolute;
+        width: 680px;
+        top: 50%;
+        -webkit-transform: translateY(-35%);
+            -ms-transform: translateY(-35%);
+                transform: translateY(-35%);
+        text-align: left;
+        color: $white-color;
+        left: 10%;
+        margin: auto;
+        span {
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        h1{
+            font-size: 64px;
+            line-height: 74px;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        p{
+            font-size: 18px;
+            line-height: 35px;
+            margin-bottom: 50px;
+        }
+        .main-btn {
+            background-color: $main-background;
+            color: $white-color;
+            padding: 15px 50px;
+            border-radius: 30px;
+            text-decoration: none;
+            @include transition(all .5s);
+            &:hover{
+                background-color: $white-color;
+                color: $main-background;
+            }
+        }
+        
+        .redbg {
+            background-color: $white-color !important;
+            color: $main-background !important;
+            &:hover{
+                background-color: $main-background !important;
+                color: $white-color !important;
+            }
+        }
+        .video-btn {
+            position: relative;
+            display: inline-block;
+            font-size: 22px;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            border-radius: 50%;
+            margin-left: 20px;
+            text-decoration: none;
+            @include transition(all .5s);
+            &:hover{
+                background-color: $main-background;
+                color: $white-color;
+            }
+            i {
+                line-height: 60px;
+                font-size: 22px;
+                text-align: center;
+                position: relative;
+                left: 2px;
+            }
+            
+            .ripple{
+                position:absolute;
+                width:160px;
+                height:160px;
+                z-index:-1;
+                left:50%;
+                top:50%;
+                opacity:0;
+                margin:-80px 0 0 -80px;
+                border-radius:100px;
+                -webkit-animation:ripple 1.8s infinite;
+                animation:ripple 1.8s infinite
+            }
+            
+            @-webkit-keyframes ripple{
+                0%{
+                    opacity:1;
+                    -webkit-transform:scale(0);
+                    transform:scale(0)
+                }
+                100%{
+                    opacity:0;
+                    -webkit-transform:scale(1);
+                    transform:scale(1)
+                }
+            }
+            
+            @keyframes ripple{
+                0%{
+                    opacity:1;
+                    -webkit-transform:scale(0);
+                    transform:scale(0)
+                }
+                100%{
+                    opacity:0;
+                    -webkit-transform:scale(1);
+                    transform:scale(1)
+                }
+            }
+            
+            .ripple:nth-child(2){
+                animation-delay:.3s;
+                -webkit-animation-delay:.3s
+            }
+            
+            .ripple:nth-child(3){
+                animation-delay:.6s;
+                -webkit-animation-delay:.6s
+            }
+            
+        }
+    }
+}
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    transition: .5s;
+}
+/* 	---------------
+	CLIENT AREA CSS
+	---------------
+*/
+
+.client-area{
+	position: relative;
+    border-top: 1px solid #f1f1f1;
+    .clients-img {
+        position: relative;
+        text-align: center;
+        padding: 0 30px;
+        img {
+            width: 90% !important;
+            position: relative;
+            display: inline-block;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    }
+}
+
+/* 	-------------------
+	END CLIENT AREA CSS
+	-------------------
+*/
+
+/* 	-----------------
+	FERTURED AREA CSS
+	-----------------
+*/
+
+.featured-area{
+    .single-featured{
+        position: relative;
+        text-align: center;
+        border: 1px solid #dfdfdf;
+        padding: 50px 15px;
+        margin-bottom: 30px;
+        @include transition(all .5s);
+        &:hover, &.active {
+            border: 1px solid #f0134d;
+            -webkit-box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7);
+            box-shadow: 13px 10px 29px rgba(240, 19, 77, 0.21);
+        }
+        i{
+            background-color: #fddee6;
+            color: $main-background;
+            font-size: 30px;
+            display: inline-block;
+            width: 70px;
+            height: 70px;
+            line-height: 70px;
+            text-align: center;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            @include transition(all .5s);
+        }
+        
+        &:hover i {
+            background-color: $main-background;
+            color: $white-color;
+        }
+        h4{
+            font-size: 20px;
+            font-weight: 600;
+            color: $header-text;
+            margin-bottom: 25px;
+        }
+    }
+}
+
+/* 	---------------------
+	END FERTURED AREA CSS
+	---------------------
+*/
+
+/* 	----------------
+	PROJECT AREA CSS
+	----------------
+*/
+
+.project-area{
+    position:relative;
+    .shorting-menu-area {
+        text-align: center;
+        max-width: 886px;
+        left: 0;
+        right: 0;
+        position: relative;
+        margin: auto;
+        margin-bottom: 30px;
+        button {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            color: $header-text;
+            margin-left: 30px;
+            padding: 10px;
+            &:hover, &.active, &:active{
+                color: $main-background;
+                -webkit-transition: .3s;
+                -o-transition: .3s;
+                transition: .3s;
+            }
+            &:focus {
+                outline: none;
+                outline: none;
+            }
+            .filter.active, .filter:active {
+                border-bottom: 2px solid #18ab9b;
+            }
+        }
+    }
+    .protfolio-work {
+        position: relative; 
+        line-height: 0;
+        .height-b{
+            height: 349px;
+        }
+        img {
+            width: 100%;
+        }
+        .overly, .overly-sec {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $main-background ;
+            opacity: 0;
+             @include transition(all .6s);
+            -ms-transform: scale(0);
+                transform: scale(0);
+            -webkit-transform: scale(0);
+            a {
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: auto;
+                text-align: center;
+                top: 40%;
+                font-size: 22px;
+                color: $main-background;
+                background-color: $white-color;
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                border-radius: 50%;
+                text-decoration: none;
+                -webkit-transition: .3s;
+                -o-transition: .3s;
+                transition: .3s;
+            }
+            .text {
+                position: absolute;
+                bottom: 22px;
+                right: 12%;
+                text-align: left;
+                color: #fff;
+                h5{
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                }
+
+            }
+        }
+        &:hover .overly, &:hover .overly-sec {
+            opacity: .8;
+            -ms-transform: scale(1);
+                transform: scale(1);
+            -webkit-transform: scale(1);
+        }
+    }
+      
+}
+.pd-0{
+    padding: 0;
+}
+
+/* 	--------------------
+	END PROJECT AREA CSS
+	--------------------
+*/
+
+/* 	----------------
+	PRICING AREA CSS
+	----------------
+*/
+
+.pricing-area{
+    .singel-pricing{
+        position: relative;
+        padding: 40px 15px;
+        margin-bottom: 30px;
+        text-align: center;
+        border: 1px solid #dfdfdf;
+        @include transition(all .5s);
+        &:hover, &.active {
+            border: 1px solid #f0134d;
+            -webkit-box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7);
+            box-shadow: 13px 10px 29px rgba(240, 19, 77, 0.21);
+        }
+        .price{
+            margin-bottom: 40px;
+            p {
+                font-size: 20px;
+                color: $header-text;
+                margin-bottom: 10px;
+            }
+            h2{
+                font-size: 40px;
+                color: $header-text;
+                font-weight: 600;
+            }
+        } 
+        .item{
+            margin-bottom: 40px;
+            p {
+                font-size: 18px;
+                margin-bottom: 25px;
+                color: $text-color;
+            }
+        } 
+        .sin-in {
+            a {
+                font-size: 15px;
+                background-color: $white-color;
+                color: $main-background;
+                border: 1px solid $main-background;
+                padding: 14px 60px;
+                border-radius: 30px;
+                display: inline-block;
+                text-decoration: none;
+                @include transition(all .5s);
+            }
+        }
+        &:hover .sin-in a,  &.active .sin-in a{
+            background-color: $main-background;
+            color: $white-color;
+            border: 1px solid $main-background;
+        }
+    }
+}
+
+/* 	--------------------
+	END PRICING AREA CSS
+	--------------------
+*/
+
+/* 	-------------
+	BLOG AREA CSS
+	-------------
+*/
+
+.blog-area{
+    background-color: $sec-background;
+    .single-blog {
+        position: relative;
+        border: 1px solid #ddd;
+        margin-bottom: 30px;
+        &:hover, &.active {
+            border: 1px solid #f0134d;
+            -webkit-box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 18px 23px rgba(240, 19, 77, 0.3);
+        }
+        @include transition(all .5s);
+        .image{
+            img{
+                width: 100%;
+            }
+        }
+        .text{
+            position: relative;
+            padding: 30px 15px;
+            ul{
+                list-style: none;
+                margin: 0 0 20px 0;
+                padding: 0;
+                position: relative;
+                li{
+                    display: inline-block;
+                    margin-right: 20px;
+                    font-size: 12px;
+                    color: #8b8b8b;
+                    &::before{
+                        content: "";
+                        background-color: #8b8b8b;
+                        position: absolute;
+                        height: 18px;
+                        width: 1px;
+                        left: 0;
+                        right: 38%;
+                        top: 5px;
+                        margin: auto;
+                    }
+                    a{
+                        font-size: 12px;
+                        color: $main-background;
+                        text-decoration: none;
+                    }
+                }
+            }
+            
+            .title{
+                margin-bottom: 20px;
+                a{
+                    font-size: 22px;
+                    color: $header-text;
+                    display: inline-block;
+                    font-weight: 600;
+                    text-decoration: none;
+                    
+                }
+            }
+            .text-tag{
+                position: relative;
+                p{
+                    font-size: 12px;
+                    color: #8b8b8b;
+                    margin: 0;
+                }
+                a{
+                    font-size: 12px;
+                    color: #8b8b8b;
+                    font-weight: 600;
+                    text-decoration: none;
+                    text-align: right;
+                    display: inline-block;
+                    position: relative;
+                    float: right;
+                    @include transition(all .5s);
+                    i{
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+        &:hover .text-tag a, &.active .text-tag a{
+            color: $main-background;
+        }
+    }
+}
+.view-more {
+    position: relative;
+    text-align: center;
+    margin-top: 60px;
+    a{
+        font-size: 15px;
+        background-color: $main-background;
+        color: $white-color;
+        border: 1px solid $main-background;
+        padding: 15px 70px;
+        border-radius: 30px;
+        text-decoration: none;
+        @include transition(all .6s);
+        &:hover{
+            background-color: $white-color;
+            color: $main-background;
+            border: 1px solid $main-background;
+        }
+    }
+}
+
+/* 	-----------------
+	END BLOG AREA CSS
+	-----------------
+*/
+
+/* 	-------------------------
+	CLIENTS FEEDBACK AREA CSS
+	-------------------------
+*/
+
+.clients-feedback-area{
+    .single-feedback-item{
+        position: relative;
+        padding: 50px 20px;
+        margin-bottom: 30px;
+        border: 1px solid #dfdfdf;
+        @include transition(all .5s);
+        &:hover, &.active {
+            border: 1px solid #f0134d;
+            -webkit-box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 18px 23px rgba(240, 19, 77, 0.3);
+        }
+        i{
+            position: absolute;
+            top: 9%;
+            right: 10%;
+            font-size: 5pc;
+            color: #f0134d;
+            opacity: .1;
+            z-index: 9;
+        }
+        p{
+            font-size: 15px;
+            color: $header-text;
+            line-height: 30px;
+            text-align: left;
+            font-style: italic;
+            margin-bottom: 50px;
+        }
+        .parson-dtails{
+            img{
+                position: absolute;
+            }
+            .name{
+                position: relative;
+                margin-left: 85px;
+                top: 10px;
+                h5{
+                    font-size: 17px;
+                    text-transform: uppercase;
+                    color: $header-text;
+                    margin-bottom: 0;
+                    font-weight: 600;
+                }
+                p{
+                    font-size: 15px;
+                    margin: 0;
+                    font-style: initial;
+                }
+            }
+        }
+    }
+}
+
+/* 	-----------------------------
+	END CLIENTS FEEDBACK AREA CSS
+	-----------------------------
+*/
+
+/* 	---------------
+	FOOTER AREA CSS
+	---------------
+*/
+
+footer{
+    position: relative;
+    background-color: #09142e;
+    padding: 60px 0;
+    .suscrib-area{
+        position: relative;
+        margin-bottom: 60px;
+        h4{
+            font-size: 38px;
+            color: $white-color;
+            font-weight: 600;
+            line-height: 50px;
+        }
+        form{
+            position: relative;
+            top: 15px;
+            input[type="email"] {
+                width: 70%;
+                padding: 10px 15px;
+                font-size: 15px;
+            }
+            button {
+                width:28%;
+                padding: 10px 15px;
+                font-size: 15px;
+                background-color: $main-background;
+                color: $white-color;
+                border: 2px solid $main-background;
+                margin-left: -3px;
+                cursor: pointer;
+                @include transition(all .5s);
+                &:hover{ 
+                    background-color: $white-color;
+                    color: $main-background;
+                    border: 2px solid $main-background;
+                }
+            }
+        }
+    }
+    .footer-area{
+        position: relative;
+        border-top: 1px solid #431436;
+        border-bottom: 1px solid #431436;
+        padding: 80px 0;
+        .single-footer{
+            p {
+                color: #fff;
+                margin-top: 40px;
+                margin-bottom: 0;
+            }
+            .title{
+                h4{
+                    font-size: 22px;
+                    font-weight: 600;
+                    margin-bottom: 40px;
+                    color: $white-color;
+                }
+            }
+            .link{
+                ul{
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    li{
+                        line-height: 30px;
+                        a{
+                            font-size: 15px;
+                            color: $white-color;
+                            text-decoration: none;
+                            @include transition(all .5s);
+                            &:hover{
+                                color: $main-background;
+                            }
+                        }
+                    }
+                }
+            }
+            .social-link{
+                ul{
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    li{
+                        display: inline-block;
+                        margin-right: 10px;
+                        a{
+                            text-decoration: none;
+                            i{
+                                font-size: 16px;
+                                width: 40px;
+                                height: 40px;
+                                line-height: 40px;
+                                text-align: center;
+                                display: inline-block;
+                                border-radius: 50%;
+                                @include transition(all .5s);
+                                &:hover{
+                                    background-color: $main-background;
+                                    color: $white-color;
+                                }
+
+                            }
+                        }
+                    
+                    }
+                }
+            }  
+        }
+    } 
+    .copy-right{
+        position: relative;
+        text-align: center;
+        margin-top: 50px;
+        p{
+            color: $white-color;
+            margin: 0;
+            a{
+                color: $main-background;
+                text-decoration: none;
+                &:hover{
+                    color: $sec-background;
+                }
+            }
+        }
+    }
+    
+    .fa-facebook-f{
+        background-color: #1a4e8a;
+        color: $white-color;
+    }
+    .fa-twitter{
+        background-color: #4a90e2;
+        color: $white-color;
+    }
+    .fa-linkedin-in{
+        background-color: #1d70d3;
+        color: $white-color;
+    }
+}
+
+/* 	-------------------
+	END FOOTER AREA CSS
+	-------------------
+*/
+
+/*  -------------------
+    ABOUT HTML AREA CSS
+    -------------------
+*/
+
+/* INNER BANNER AREA */
+.inner-banner-area{
+    position: relative;
+    background-image: url(../img/banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 550px;
+    z-index: 99;
+    &::before{
+        content: "";
+        background-color: rgba(0,0,0, 0.7);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .text {
+        position: absolute;
+        width: 680px;
+        top: 50%;
+        -webkit-transform: translateY(-35%);
+            -ms-transform: translateY(-35%);
+                transform: translateY(-35%);
+        text-align: center;
+        color: $white-color;
+        left: 0;
+        right: 0;
+        margin: auto;
+        h1 {
+            font-size: 44px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            li{
+                display: inline-block;
+                text-transform: uppercase;
+                font-size: 16px;
+                a{
+                    font-size: 16px;
+                    color: $white-color;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    transition: .5s;
+                    &:hover{
+                        color: $main-background;
+                    }
+                }
+            }
+        }
+    }
+}
+/* END INNER BANNER AREA */
+
+/* ABOUT AREA */
+.about-area{
+    position: relative;
+    .about-text {
+        position: relative;
+        top: 30px;
+        span {
+            font-size: 20px;
+            color: $main-background;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        h2 {
+            font-size: 40px;
+            font-weight: 700;
+            color: #232a3f;
+            line-height: 50px;
+            margin-bottom: 40px;
+        }
+        p{
+            color: $text-color-2;
+            margin-bottom: 30px;
+        }
+        a {
+            font-size: 15px;
+            border: 1px solid #f0134d;
+            color: #f0134d;
+            padding: 10px 40px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            @include transition(all .6s);
+            &:hover{
+                background-color: $main-background;
+                color: $white-color;
+                box-shadow: 9px 26px 20px rgba(240, 19, 77, 0.3);
+            }
+        }
+    }
+    .about-img {
+        position: relative;
+        margin-bottom: 71px;
+        .img-dot {
+            position: absolute;
+        }
+        .main-img {
+            position: relative;
+            left: 13%;
+            top: 21px;
+            max-width: 70%;
+            z-index: 1;
+        }
+        .border-img {
+            position: absolute;
+            right: 4%;
+            top: 19%;
+            max-height: 95%;
+        }
+    }
+}
+/* END ABOUT AREA */
+
+/* TEAM AREA */
+.team-area {
+    .single-team {
+        position: relative;
+        border: 1px solid #ddd;
+        margin-bottom: 30px;
+        @include transition(all .6s);
+        &:hover, &.active {
+            border: 1px solid #fff;
+            box-shadow: 13px 10px 29px rgba(240, 19, 77, 0.21);
+        }
+        img{
+            width: 100%;
+        }
+        .text{
+            position: relative;
+            padding: 30px;
+            text-align: center;
+            h3{
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 8px;
+            }
+            p{
+                color: $text-color-2;
+                font-size: 14px;
+            }
+            ul{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                li{
+                    display: inline-block;
+                    a {
+                        position: relative;
+                        border: 1px solid #d7d7d7;
+                        width: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                        display: inline-block;
+                        border-radius: 50%;
+                        background-color: #d7d7d7;
+                        color: $white-color;
+                        margin: 0 5px;
+                        text-decoration: none;
+                        @include transition(all .6s);
+                        &:hover{
+                            background-color: $main-background;
+                            border: 1px solid $main-background;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* END TEAM AREA */
+
+/*  -----------------------
+    END ABOUT HTML AREA CSS
+    -----------------------
+*/
+
+/*  -------------------
+    IDEAS HTML AREA CSS
+    -------------------
+*/
+
+.ideas-area{
+    .single-idea{
+        position: relative;
+        border: 1px solid #ddd;
+        margin-bottom: 30px;
+        @include transition(all .6s);
+        &:hover, &.active {
+            border: 1px solid #fff;
+            box-shadow: 13px 10px 29px rgba(240, 19, 77, 0.21);
+        }
+        img{
+            width: 100%;
+        }
+        .text {
+            padding: 30px;
+            h4 {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+            p{
+                font-size: 15px;
+                color: $text-color-2;
+                margin: 0;
+            }
+        }
+    }
+}
+
+/*  -----------------------
+    END IDEAS HTML AREA CSS
+    -----------------------
+*/
+
+/*  -------------------------
+    SINGLE BLOG HTML AREA CSS
+    -------------------------
+*/
+
+.single-blog-area{
+    .blog-left-area{
+        .title{
+            margin-bottom: 30px;
+            h2 {
+                font-size: 30px;
+                font-weight: 600;
+                color: $header-text;
+                margin-bottom: 15px;           
+            }
+            ul{
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li{
+                    color: $text-color-2;
+                    font-size: 14px;
+                    a{
+                        font-size: 14px;
+                        color: $header-text;
+                        &:hover{
+                            color: $main-background;
+                        }
+                    }
+                    i{
+                        color: $main-background;
+                        margin: 0 5px;
+                    }
+                }
+            }
+        }
+        img{
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .text {
+            h5{
+                font-size: 15px;
+                color: $header-text;
+                font-weight: 600;
+                margin-bottom: 15px;
+                line-height: 26px;
+            }
+        }
+        .blockquote{
+            blockquote {
+                margin: 0 0 1rem;
+                font-size: 15px;
+                font-weight: 600;
+                font-style: italic;
+                line-height: 26px;
+                color: $header-text;
+                padding: 20px;
+                i {
+                    font-size: 40px;
+                    color: #b3b2b2;
+                    margin-right: 10px;
+                }
+            }
+        }
+        .comment {
+            margin-top: 50px;
+            .single-coment {
+                background-color: #f2f2f2;
+                margin-bottom: 40px;
+                padding: 30px;
+                border-radius: 30px;
+                img {
+                    width: 16% !important;
+                    float: left;
+                    margin-right: 20px;
+                }
+                h6 {
+                    font-size: 18px;
+                    font-weight: 600;
+                    font-style: italic;
+                }
+                a {
+                    font-size: 15px;
+                    color: $white-color;
+                    text-decoration: none;
+                    -webkit-transition: all .5s;
+                    transition: all .5s;
+                    background-color: $main-background;
+                    border: 1px solid $main-background;
+                    padding: 3px 23px;
+                    border-radius: 41px;
+                    &:hover{
+                        color: $main-background;
+                        background-color: $white-color;
+                        border: 1px solid $main-background;
+                    }
+                }
+            }
+        }
+        .ml-40{
+            margin-left: 50px;
+        }
+        .leave-comment{
+            margin-top: 50px;
+            .form-control {
+                color: #212529;
+                background-color: #fff;
+                border: 1px solid #f0134d;
+                border-radius: 0;
+                padding: 10px 20px;
+            }
+            textarea {
+                overflow: auto;
+                resize: vertical;
+                width: 100%;
+                height: 200px;
+                padding: 20px;
+                background-color: #fff;
+                border: 1px solid #f0134d;
+            }
+            .contact-btn {
+                position: relative;
+                text-align: center;
+                margin-top: 30px;
+                .cont-btn {
+                    background-color: $main-background;
+                    color: $white-color;
+                    padding: 15px 50px;
+                    border-radius: 30px;
+                    text-decoration: none;
+                    border: 1px solid $main-background;
+                    @include transition(all .5s);
+                    cursor: pointer;
+                    &:hover{
+                        background-color: $white-color;
+                        color: $main-background;
+                        border: 1px solid $main-background;
+                    }
+                }
+            }
+        }
+        
+    }
+    .single-right-area{
+        .single-item {
+            padding: 30px 15px;
+            margin-bottom: 30px;
+            background-color: $sec-background;
+            input {
+                color: #212529;
+                background-color: #fff;
+                border: 1px solid #f0134d;
+                border-radius: 0;
+                padding: 10px 20px;
+                width: 100%;
+                border-radius: 30px;
+                &:focus {
+                    outline-offset: 0;
+                    outline: none;
+                }
+            }
+            button {
+                position: absolute;
+                right: 8%;
+                width: 21%;
+                height: 45px;
+                font-size: 20px;
+                background-color: #f0134d;
+                border: navajowhite;
+                color: #fff;
+                border-radius: 30px;
+                cursor: pointer;
+            }
+            .single-news{
+                margin-bottom: 20px;
+                a{
+                    color: $header-text;
+                    font-weight: 600;
+                    @include transition(all .5s);
+                    &:hover{
+                        color: $main-background;
+                    }
+                    img {
+                        width: 30%;
+                        float: left;
+                        height: 65px;
+                        margin-right: 10px;
+                    }
+                }
+                h6{
+                    font-size: 15px;
+                    color: $text-color-2;
+                }
+            }
+            ul {
+                margin-bottom: 0;
+                list-style-type: square;
+                color: #f0134d;
+                li{
+                    margin-bottom: 10px;
+                    a{
+                        color: $header-text;
+                        text-decoration: none;
+                        @include transition(all .5s);
+                        &:hover{
+                            color: $main-background;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*  -----------------------------
+    END SINGLE BLOG HTML AREA CSS
+    -----------------------------
+*/
+
+/*  ------------------------
+    CONTACT US HTML AREA CSS
+    ------------------------
+*/
+
+.contact-us{
+    .contact-info {
+        position: relative;
+        margin-bottom: 70px;
+        .single-info-text{
+            span{
+                font-size: 16px;
+                letter-spacing: 3px;
+                color: $main-background;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+                display: inline-block;
+                font-weight: 500;
+            }
+            h2{
+                color: $header-text;
+                font-size: 40px;
+                font-weight: 600;
+                margin-bottom: 15px;
+                line-height: 50px;
+            }
+            p{
+                font-size: 18px;
+                color: $text-color;
+            }
+        }
+        .single-info-area {
+            .single-info {
+                position: relative;
+                text-align: center;
+                img{
+                    margin-bottom: 20px;
+                }
+                h4{
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    #contactForm{
+        .form-control {
+            color: #212529;
+            background-color: #fff;
+            border: 1px solid #f0134d;
+            border-radius: 0;
+            padding: 10px 20px;
+            &:focus{
+                box-shadow: none;
+            }
+        }
+        textarea {
+            overflow: auto;
+            resize: vertical;
+            width: 100%;
+            height: 150px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #f0134d;
+        }
+        .contact-btn {
+            position: relative;
+            text-align: left;
+            margin-top: 20px;
+            .cont-btn {
+                background-color: $main-background;
+                color: $white-color;
+                padding: 10px 40px;
+                text-decoration: none;
+                border: 1px solid $main-background;
+                @include transition(all .5s);
+                cursor: pointer;
+                &:hover{
+                    background-color: $white-color;
+                    color: $main-background;
+                    border: 1px solid $main-background;
+                }
+            }
+        }
+    }
+}
+
+/*  ----------------------------
+    END CONTACT US HTML AREA CSS
+    ----------------------------
+*/
+
+/*  ==================
+        TOTOP CSS
+    ==================
+*/
+#toTop {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    cursor: pointer;
+    display: none;
+    z-index: 999999;
+}
+.top-arrow{
+    background: $main-background;
+    color: $white-color;
+    border: 1px solid $main-background;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    i {
+        font-size: 20px;
+        font-weight: 600;
+        transform: rotate(-90deg);
+    }
+    &:hover {
+        background: $white-color;
+        color: $main-background;
+        border: 1px solid $main-background;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+}
+
+/*  ===================
+        END TOTOP CSS
+    ===================
+*/

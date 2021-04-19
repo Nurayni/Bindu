@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+  <!-- Place favicon.ico in the root directory -->
+
+  
+  <title>BINDU - Business HTML Template</title>
+
+  <!-- All CSS here -->
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="assets/css/animate.min.css">
+  <!-- Magnific Popup CSS -->
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <!-- Icofont CSS -->
+  <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/css/all.css">
+  <!-- Meanmenu CSS -->
+  <link rel="stylesheet" href="assets/css/meanmenu.css">
+  <!-- Default CSS -->
+  <link rel="stylesheet" href="assets/css/default.css">
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Responsive CSS -->
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+    <!-- Loader -->
+    <div class="loader-box">    
+        <div class="preloder-inner"> 
+            <div class="ball zoom"></div> 
+            <div class="ball zoom"></div> 
+            <div class="ball zoom"></div> 
+        </div>
+    </div>
+    <!-- End Loader -->
+	
+    <!-- Main Menu -->
+	<div class="main-menu">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-lg-2">
+					<div class="logo-area">
+							<a href=""><img src="assets/img/logo.png" alt=""></a>
+					</div>
+				</div>
+				<div class="col-lg-8">
+					<div class="menu ">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="services.html">Services</a></li>
+							<li><a href="portfolio.html">Portfolio</a></li>
+							<li><a href="blog.html">Blog</a></li>
+							<li><a class="active" href="contact.html">Contact</a></li>
+						</ul>                                                                       
+					</div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="search">
+                        <button class="openBtn" onclick="openSearch()"><i class="fas fa-search"></i></button>
+                        <div id="myOverlay" class="overlay">
+                            <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+                            <div class="overlay-content">
+                                <form action="/action_page.php">
+                                    <input type="text" placeholder="Search.." name="search">
+                                    <button type="submit"><i class="fas fa-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+		    </div>
+        </div>
+	</div> 
+    <!-- End Main Menu -->
+  
+    <!-- Inner Banner Area -->
+    <div class="inner-banner-area">
+        <div class="container">
+            <div class="text">
+                <h1 class="wow fadeInUp">CONTACT PAGE </h1>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li>/</li>
+                    <li>CONTACT PAGE</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Inner Banner Area -->
+
+    <!--contact-html-start-->
+    <div class="contact-us section-padding">
+        <div class="container">
+            <div class="contact-info">
+                <div class="row">
+                    <div class="col-lg-5 col-md-12">
+                        <div class="single-info-text">
+                            <span class="wow fadeInDown">CONTACT US WITH EASE</span>
+                            <h2 class="wow fadeInUp">Get in touch</h2>
+                            <p class="wow fadeInUp">Visit our agency or simply send us an email anytime you want. If you have any questions, please feel free to contact us.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-12">
+                        <div class="single-info-area">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="single-info wow fadeInLeft">
+                                        <img src="assets/img/contact.png" alt="contact">
+                                        <h4>Address</h4>
+                                        <p>Bloomsbury Square, <br>
+                                            London WC1B 4EA</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="single-info wow fadeInUp">
+                                        <img src="assets/img/contact2.png" alt="contact">
+                                        <h4>Call us</h4>
+                                        <p>000 2222 333 <br>
+                                        444 2222 555</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="single-info wow fadeInRight">
+                                        <img src="assets/img/contact3.png" alt="contact">
+                                        <h4>Email us</h4>
+                                        <p>info@avantage.co.uk <br>
+                                        office@avantage.co.uk</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-6 col-md-6 col-sm-12 col-12">
+                    <form id="contactForm">
+                        <div class="row"> 
+                            <div class="col-sm-12 col-md-12">
+                                <div class="form-group wow fadeInUp">
+                                    <input type="text" class="form-control" required data-error="Please enter your first name" name="First name" placeholder="First Name">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12">
+                                <div class="form-group wow fadeInUp">
+                                    <input type="text" class="form-control" required data-error="Please enter your first name" name="First name" placeholder="Last Name">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12"> 
+                                <div class="form-group wow fadeInUp">
+                                    <input type="email" class="form-control" required data-error="Please enter your email" name="email" placeholder="Email">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12"> 
+                                <div class="form-group wow fadeInUp">
+                                    <input type="tel" class="form-control" required data-error="Your Phone Number (optional)" name="phone" placeholder="Your Phone Number (optional)">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-md-12">
+                                <div class="form-group wow fadeInUp">
+                                    <textarea class="form-controls" required data-error="Write your message" rows="5" placeholder="Message"></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-btn wow fadeInUp">
+                            <button type="submit" class="cont-btn">Send Message</button>
+                            <div id="msgSubmit" class="h3 text-left hidden"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-xl-6 col-md-6 col-sm-12 col-12">
+                <div class="map wow fadeInUp">
+                    <iframe src="https://www.google.com/maps/embed?" height="450" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--contact-html-end-->
+
+    <!-- Footer Area -->
+    <footer>
+        <div class="container">
+            <div class="suscrib-area wow fadeInUp">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h4>Start Growing <br>
+                        with Bindu by today</h4>
+                    </div>
+                    <div class="col-lg-6">
+                        <form>
+                            <input type="email" placeholder="Your Email">
+                            <button>Subscribe Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-area wow fadeInUp">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="single-footer">
+                            <a href=""><img src="assets/img/logo.png" alt=""></a>
+                            <p>950 N Riverun Dr State 450 <br> Holderarea DA 898989 USA <br>
+                            +00 123 456 7890</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="single-footer wow fadeInUp">
+                                    <div class="title">
+                                        <h4>Media</h4>
+                                    </div>
+                                    <div class="link">
+                                        <ul>
+                                            <li><a href="">Twittter</a></li>
+                                            <li><a href="">Youtube</a></li>
+                                            <li><a href="">Pinterest</a></li>
+                                            <li><a href="">GitHub</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="single-footer wow fadeInUp">
+                                    <div class="title">
+                                        <h4>About Us</h4>
+                                    </div>
+                                    <div class="link">
+                                        <ul>
+                                            <li><a href="">Terms</a></li>
+                                            <li><a href="">Privacy</a></li>
+                                            <li><a href="">Copyright</a></li>
+                                            <li><a href="">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="single-footer wow fadeInUp">
+                                    <div class="title">
+                                        <h4>Others</h4>
+                                    </div>
+                                    <div class="link">
+                                        <ul>
+                                            <li><a href="">Sitemap</a></li>
+                                            <li><a href="">Blog</a></li>
+                                            <li><a href="">Faq</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="single-footer wow fadeInUp">
+                                    <div class="title">
+                                        <h4>Follow Us</h4>
+                                    </div>
+                                    <div class="social-link">
+                                        <ul>
+                                            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copy-right">
+                <p class="wow fadeInUp">Copyright © 2020 <a href="https://themeforest.net/user/theme_be">Theme Be</a>. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer Area -->
+
+
+ 
+  <!-- JS here -->
+  <!-- Jquery-1.12.4 JS -->
+  <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+  <!-- Popper JS -->
+  <script src="assets/js/popper.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <!-- Owl Carousel JS -->
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <!-- Mixitup JS -->
+  <script src="assets/js/mixitup.min.js"></script>
+  <!-- Meanmenu JS -->
+  <script src="assets/js/jquery.meanmenu.min.js"></script>
+  <!-- Ajax Form JS -->
+  <script src="assets/js/ajax-form.js"></script>
+  <!-- Wow JS -->
+  <script src="assets/js/wow.min.js"></script>
+  <!-- Magnific Popup JS -->
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <!-- Form Validator js -->
+<script src="assets/js/form-validator.min.js"></script>
+  <!-- Contact Form js -->
+<script src="assets/js/contact-form-script.js"></script>
+<!-- Smoothscroll JS -->
+<script src="assets/js/smooth-scroll.polyfills.min.js"></script>
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

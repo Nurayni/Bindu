@@ -1,0 +1,407 @@
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .main-menu .menu ul li {
+        padding: 0 13px;
+    }
+    .project-area .protfolio-work .height-b {
+        height: 265px;
+    }
+    .project-area .protfolio-work .overly a {
+        top: 22%;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+    .project-area .protfolio-work .overly .text {
+        position: absolute;
+        bottom: 37px;
+        right: 0;
+        left: 0;
+        text-align: center;
+        color: #fff;
+        margin: auto;
+    }
+    footer .suscrib-area form button {
+        padding: 10px 5px;
+    }
+    footer .footer-area .single-footer .social-link ul li a i {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+    footer .footer-area .single-footer .social-link ul li {
+        margin-right: 2px;
+    }
+    /* ABOUT HTML AREA */
+    .about-area .about-text h2 br {
+        display: none;
+    }
+    .about-area .about-text h2 {
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 25px;
+    }
+    .about-area .about-text a {
+        margin-top: 20px;
+    }
+    .single-blog-area .single-right-area .single-item .title h3{
+        font-size: 24px;;
+    }
+    .single-blog-area .single-right-area .single-item button {
+        right: 9%;
+        width: 27%;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .menu-shrink {
+        display: none;
+    }
+    .mean-container .mean-bar {
+        background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+        float: left;
+        position: absolute;
+        width: 100%;
+        z-index: 999999;
+        top: 58px;
+    }
+    .mean-container .mean-nav {
+        background: #f0134d none repeat scroll 0 0;
+    }
+    .mean-container a.meanmenu-reveal {
+        border: 1px solid #fff;
+        color: #fff;
+        right: 10% !important;
+    }
+    .mean-container a.meanmenu-reveal span {
+        background: #fff none repeat scroll 0 0;
+    }
+    .mean-container .mean-nav ul li a {
+        padding: 20px 5%;
+    }
+    .main-menu {
+        padding: 20px 0;
+    }
+    .main-menu .search {
+        right: 15%;
+        top: -23px;
+    }
+    .main-menu .search .openBtn {
+        font-size: 16px;
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+    }
+    .banner-area .banner-text h1 {
+        font-size: 53px;
+        line-height: 64px;
+    }
+    .featured-area .single-featured {
+        max-width: 500px;
+        left: 0;
+        right: 0;
+        margin: auto auto 30px auto;
+    }
+    .project-area .protfolio-work .overly a {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+    .project-area .protfolio-work .overly .text {
+        position: absolute;
+        bottom: 150px;
+        right: 0;
+        left: 0;
+        text-align: center;
+        margin: auto;
+    }
+    .project-area .protfolio-work .height-b {
+        height: auto;
+    }
+    .project-area .protfolio-work .overly-sec .text {
+        position: absolute;
+        bottom: 15px;
+        right: 0;
+        left: 0;
+        text-align: center;
+        color: #fff;
+    }
+    .project-area .protfolio-work {
+        max-width: 500px;
+        left: 0;
+        right: 0;
+        margin: auto auto 30px auto;
+    }
+    .pricing-area .singel-pricing {
+        max-width: 500px;
+        left: 0;
+        right: 0;
+        margin: auto auto 30px auto;
+    }
+    .blog-area .single-blog {
+        max-width: 500px;
+        left: 0;
+        right: 0;
+        margin: auto auto 30px auto;
+    }
+    .clients-feedback-area .single-feedback-item{
+        max-width: 500px;
+        left: 0;
+        right: 0;
+        margin: auto auto 30px auto;
+    }
+    .single-footer {
+        margin-bottom: 30px;
+    }
+    footer .footer-area .single-footer .title h4 {
+        margin-bottom: 15px;
+    }
+    
+    /* ABOUT HTML AREA */
+    .about-area .about-text a {
+        margin-top: 14px;
+    }
+    .about-area .about-img .border-img {
+        right: 10%;
+        top: 17%;
+    }
+    .about-area .about-img {
+        margin: 100px 0 72px;
+    }
+    .section-padding {
+        padding: 70px 0;
+    }
+    .section-padding-two {
+        padding: 70px 0 40px;
+    }
+    .team-area .single-team .text h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+    .single-blog-area .single-right-area .single-item button {
+        right: 4%;
+    }
+    .single-blog-area .single-right-area .single-item .single-news a img {
+        width: 11%;
+        height: 50px;
+        margin-right: 20px;
+    }
+    
+    .single-info-text {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .menu-shrink {
+        display: none;
+    }
+    .mean-container .mean-bar {
+        background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+        float: left;
+        position: absolute;
+        width: 100%;
+        z-index: 999999;
+        top: 58px;
+    }
+    .mean-container a.meanmenu-reveal {
+        border: 1px solid #fff;
+        color: #fff;
+        right: 4% !important;
+    }
+    .mean-container a.meanmenu-reveal span {
+        background: #fff none repeat scroll 0 0;
+    }
+    .mean-container .mean-nav ul li a {
+        padding: 20px 5%;
+    }
+    .main-menu {
+        padding: 20px 0;
+    }
+    .main-menu .search {
+        right: 20%;
+        top: -23px;
+    }
+    .main-menu .search .openBtn {
+        font-size: 16px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+    .main-menu .search .overlay .overlay-content {
+        width: 100%;
+        margin-top: 0;
+    }
+    .main-menu .search .overlay input[type=text] {
+        width: 100%;
+    }
+    .main-menu .search .overlay button {
+        position: relative;
+        width: 100%;
+        right: 0;
+    }
+    .banner-area {
+        overflow: hidden;
+    }
+    .banner-area .banner-text {
+        width: 100%;
+        text-align: center;
+        top: 45%;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    .banner-area .banner-text span {
+        font-size: 16px;
+    }
+    .banner-area .banner-text h1 {
+        font-size: 43px;
+        line-height: 54px;
+        margin-bottom: 20px;
+    }
+    .banner-area .banner-text p {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+    .section-padding {
+        padding: 60px 0;
+    }
+    .section-padding-two {
+        padding: 60px 0 40px;
+    }
+    .section-title h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .section-title p {
+        font-size: 16px;
+    }
+    .client-area .clients-img img {
+        width: 55% !important;
+    }
+    .featured-area .single-featured {
+        max-width: 400px;
+        left: 0;
+        right: 0;
+        margin: auto auto 30px auto;
+    }
+    .project-area .protfolio-work .overly a, .project-area .protfolio-work .overly-sec a {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+    .project-area .protfolio-work .overly-sec a {
+        top: 16%;
+    }
+    .project-area .protfolio-work .overly .text {
+        position: absolute;
+        bottom: 100px;
+        right: 0;
+        left: 0;
+        text-align: center;
+        margin: auto;
+    }
+    .project-area .protfolio-work .overly-sec .text {
+        bottom: 22px;
+        right: 0;
+        left: 0;
+        text-align: center;
+    }
+    .project-area .shorting-menu-area button {
+        margin-left: 0px;
+    }
+    .project-area .protfolio-work .height-b {
+        height: auto;
+    }
+    .project-area .protfolio-work {
+        max-width: 400px;
+        left: 0;
+        right: 0;
+        margin: auto auto 30px auto;
+    }
+    .pricing-area .singel-pricing {
+        max-width: 400px;
+        left: 0;
+        right: 0;
+        margin: auto auto 30px auto;
+    }
+    .blog-area .single-blog {
+        max-width: 400px;
+        left: 0;
+        right: 0;
+        margin: auto auto 30px auto;
+    }
+    .clients-feedback-area .single-feedback-item {
+        max-width: 400px;
+        left: 0;
+        right: 0;
+        margin: auto auto 30px auto;
+    }
+    footer .suscrib-area h4 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    footer .suscrib-area form button {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+    footer .suscrib-area form input[type="email"] {
+        width: 100%;
+    }
+    footer .footer-area {
+        padding: 60px 0;
+    }
+    .single-footer {
+        margin-bottom: 40px;
+    }
+    footer .footer-area .single-footer .title h4 {
+        margin-bottom: 20px;
+    }
+    /* ABOUT HTML AREA */
+    .inner-banner-area .text {
+        width: 100%;
+    }
+    .about-area .about-text h2 br {
+        display: none;
+    }
+    .about-area .about-text h2 {
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 30px;
+    }
+    .about-area .about-text a {
+        margin-top: 5px;
+    }
+    .about-area .about-img .img-dot {
+        width: 80%;
+    }
+    .about-area .about-img {
+        position: relative;
+        margin: 90px 0 60px;
+    }
+    .team-area .single-team {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .single-blog-area .single-right-area .single-item .single-news a img {
+        width: 16%;
+        height: 46px;
+    }
+    .single-info {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    .contact-us .contact-info {
+        position: relative;
+        margin-bottom: 40px;
+    }
+    .contact-us .contact-info .single-info-area .single-info {
+        position: relative;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    form#contactForm {
+        margin-bottom: 50px;
+    }
+}
